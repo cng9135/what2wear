@@ -1,0 +1,8 @@
+{
+  "appId": "com.what2wear.app",
+  "appName": "myApp",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}
