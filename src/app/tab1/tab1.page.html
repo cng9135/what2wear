@@ -13,5 +13,48 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Settings"></app-explore-container>
+  <ion-list>
+    <ion-item>
+      <ion-label>Temperature</ion-label>
+      <ion-select value="f">
+        <ion-select-option value="f">Farenheit</ion-select-option>
+        <ion-select-option value="c">Celsius</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Push Notifications</ion-label>
+      <ion-toggle [(ngModel)]="pushenabled" color="primary"></ion-toggle>
+    </ion-item>
+  </ion-list>
+  
+  <div *ngIf="pushenabled">
+  <ion-list-header>
+    <ion-label>When to notify me about...</ion-label>
+  </ion-list-header>
+  <ion-item>
+    <ion-label>Today's Weather</ion-label>
+    <ion-datetime displayFormat="hh:mm a" placeholder="Select a time"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label>Today's Events</ion-label>
+    <ion-datetime displayFormat="hh:mm a" placeholder="Select a time"></ion-datetime>
+  </ion-item>
+
+  <ion-list-header>
+    <ion-label>Warning Notifications</ion-label>
+  </ion-list-header>
+  <ion-item>
+    <ion-label>Percipitation Warning</ion-label>
+    <ion-toggle color="secondary"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label>Freezing Warning</ion-label>
+    <ion-toggle color="secondary"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label>Storm Warning</ion-label>
+    <ion-toggle color="secondary"></ion-toggle>
+  </ion-item>
+  </div>
 </ion-content>
