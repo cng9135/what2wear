@@ -8,7 +8,7 @@
 
 <ion-content [fullscreen]="true" center>
 
-    <h5>Monday, March 23</h5>
+  <h5>Fairfax, VA: Monday, March 23</h5>
 
     <ion-icon class="weather-icon" name="rainy-outline"></ion-icon>
     <h1>73˚F</h1>
@@ -20,5 +20,47 @@
       <ion-button size="medium" color="dark">Day3</ion-button>
       <ion-button size="medium" color="primary">Day4</ion-button>
   </ion-item>
+  <h5>Events Today</h5>
+
+ 
+      <ion-item-sliding (ionSwipe)="delete(item)">
+        <ion-item>      Event 1</ion-item>
+        <ion-item-options>
+          <button ion-button expandable (click)="delete(item)"><ion-icon name="trash"></ion-icon></button>
+          <button ion-button expandable (click)="delete(item)"> <ion-icon name="create"></ion-icon></button>
+        </ion-item-options>
+      </ion-item-sliding>
+   
+      <ion-item-sliding (ionSwipe)="delete(item)">
+  <ion-item>  Event 2</ion-item>
+  <ion-item-options>
+    <button ion-button color= "primary" expandable (click)="delete(item)"><ion-icon name="trash"></ion-icon></button>
+    <button ion-button color= "secondary" expandable (click)="delete(item)"> <ion-icon name="create"></ion-icon></button>
+  </ion-item-options>
+</ion-item-sliding>
+
+<ion-item-sliding (ionSwipe)="delete(item)">
+  <ion-item>  Event 3</ion-item>
+  <ion-item-options>
+    <button ion-button color= "primary" expandable (click)="delete(item)"><ion-icon name="trash"></ion-icon></button>
+    <button ion-button color= "secondary" expandable (click)="delete(item)"> <ion-icon name="create"></ion-icon></button>
+  </ion-item-options>
+</ion-item-sliding>
+ 
+<ion-item-sliding (ionSwipe)="delete(item)">
+  <ion-item>  Event 4</ion-item>
+  <ion-item-options>
+    <button ion-button color= "primary" expandable (click)="delete(item)"><ion-icon name="trash"></ion-icon></button>
+    <button ion-button color= "secondary" expandable (click)="delete(item)"> <ion-icon name="create"></ion-icon></button>
+  </ion-item-options>
+</ion-item-sliding>
+
+<ion-item-sliding (ionSwipe)="delete(item)">
+  <ion-item>  Event 5</ion-item>
+  <ion-item-options>
+    <button ion-button color= "primary" expandable (click)="delete(item)"><ion-icon name="trash"></ion-icon></button>
+    <button ion-button color= "secondary" expandable (click)="delete(item)"> <ion-icon name="create"></ion-icon></button>
+  </ion-item-options>
+</ion-item-sliding>
 
 </ion-content>
