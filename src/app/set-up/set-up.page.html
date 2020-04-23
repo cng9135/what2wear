@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Setup
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Setup</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <IonItemDivider>Name</IonItemDivider>
+    <IonItem>
+      <IonInput value={text} placeholder="Enter Your Name:" onIonChange={e => setText(e.detail.value!)}></IonInput>
+    </IonItem>
+    <ion-item>
+      <ion-label>Temperature</ion-label>
+      <ion-select value="f">
+        <ion-select-option value="f">Fahrenheit</ion-select-option>
+        <ion-select-option value="c">Celsius</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Push Notifications</ion-label>
+      <ion-toggle [(ngModel)]="pushenabled" color="primary"></ion-toggle>
+    </ion-item>
+  </ion-list>
+  
+  <div *ngIf="pushenabled">
+  <ion-list-header>
+    <ion-label>When to notify me about...</ion-label>
+  </ion-list-header>
+  <ion-item>
+    <ion-label>Today's Weather</ion-label>
+    <ion-datetime displayFormat="hh:mm a" placeholder="Select a time"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label>Today's Events</ion-label>
+    <ion-datetime displayFormat="hh:mm a" placeholder="Select a time"></ion-datetime>
+  </ion-item>
+</ion-content>
