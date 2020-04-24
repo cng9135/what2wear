@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NavParams } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-add-event',
@@ -7,6 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AddEventPage{
 
-  constructor() {}
+  constructor(public modalController: ModalController) {}
+
+  async closeModal() {
+    await this.modalController.dismiss();
+  }
   
 }

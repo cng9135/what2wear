@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { Tab3Page } from './tab3.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
+import { AddEventPage } from '../tab4/add-event.page'
+
 @NgModule({
   imports: [
     IonicModule,
@@ -14,6 +16,7 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
     ExploreContainerComponentModule,
     RouterModule.forChild([{ path: '', component: Tab3Page }])
   ],
-  declarations: [Tab3Page]
+  declarations: [Tab3Page, AddEventPage],
+  entryComponents: [AddEventPage]
 })
 export class Tab3PageModule {}

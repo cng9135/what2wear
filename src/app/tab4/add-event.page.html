@@ -1,5 +1,12 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+
+      <ion-button (click)="closeModal()">
+       <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+
+    </ion-buttons>
     <ion-title>Add Event</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -28,7 +35,11 @@
 
   <ion-item>
     <ion-label position="floating">How to Dress:</ion-label>
-    <ion-textarea placeholder="Optional"></ion-textarea>
+    <ion-select value="c">
+      <ion-select-option value="c">Casual</ion-select-option>
+      <ion-select-option value="s">Semi-Formal</ion-select-option>
+      <ion-select-option value="f">Formal</ion-select-option>
+    </ion-select>
   </ion-item>
 
   <ion-item>
