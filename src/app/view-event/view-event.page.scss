@@ -1,0 +1,16 @@
+ion-content {
+    --ion-background-color: #50c8ff;
+    --ion-text-color: white;
+    text-align: center;
+  }
+  .weather-icon {
+    font-size: 75px;
+  }
+  
+  .weather-text {
+    color: rgb(114, 117, 97);
+  }
+  
+  ion-content ion-toolbar {
+    --background: translucent;
+  }

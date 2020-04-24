@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { AddEventPage } from '../tab4/add-event.page';
+import { AddEventPage } from '../add-event/add-event.page';
 
 
 @Component({

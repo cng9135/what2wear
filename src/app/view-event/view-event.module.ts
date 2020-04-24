@@ -3,20 +3,19 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Tab3Page } from './tab3.page';
+import { ViewEventPage } from './view-event.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { AddEventPage } from '../add-event/add-event.page'
 
 @NgModule({
   imports: [
-    IonicModule,
     CommonModule,
     FormsModule,
+    IonicModule,
     ExploreContainerComponentModule,
-    RouterModule.forChild([{ path: '', component: Tab3Page }])
+    RouterModule.forChild([{ path: '', component: ViewEventPage }])
   ],
-  declarations: [Tab3Page, AddEventPage],
-  entryComponents: [AddEventPage]
+  declarations: [ViewEventPage]
 })
-export class Tab3PageModule {}
+export class ViewEventPageModule {}
