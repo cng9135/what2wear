@@ -11,5 +11,8 @@ export class EditEventPage{
 
   constructor(public modalController: ModalController) { }
 
-
+  async closeModal() {
+    await this.modalController.dismiss();
+  }
+  
 }

@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'view-event',
     loadChildren: () => import('./view-event/view-event.module').then( m => m.ViewEventPageModule)
+  },
+  {
+    path: 'event-sched',
+    loadChildren: () => import('./event-sched/event-sched.module').then( m => m.EventSchedPageModule)
   }
 ];
 @NgModule({
