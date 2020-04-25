@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { AddEventPage } from '../add-event/add-event.page';
 
-
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
@@ -10,11 +9,9 @@ import { AddEventPage } from '../add-event/add-event.page';
 })
 export class Tab3Page {
 
-  constructor(public modalController: ModalController) {
+  constructor(public modalController: ModalController) {}
 
-  }
-
-  async presentModal() {
+  async presentAddEvent() {
     const modal = await this.modalController.create({
       component: AddEventPage
     });
