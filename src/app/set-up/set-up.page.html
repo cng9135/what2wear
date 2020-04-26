@@ -12,20 +12,19 @@
       <ion-title size="large">Setup</ion-title>
     </ion-toolbar>
   </ion-header>
-  
-  <ion-button href="/tabs">Next</ion-button>
 
   <ion-list>
-    <ion-item-divider>Name</ion-item-divider>
-    <ion-item>
-      <ion-input value={text} placeholder="Enter Your Name:" onIonChange={e => setText(e.detail.value!)}></ion-input>
-  </ion-item>
     <ion-item>
       <ion-label>Temperature</ion-label>
       <ion-select value="f">
-        <ion-select-option value="f">Fahrenheit</ion-select-option>
+        <ion-select-option value="f">Farenheit</ion-select-option>
         <ion-select-option value="c">Celsius</ion-select-option>
       </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>First Name</ion-label>
+      <ion-input class="ion-text-right" placeholder="Enter Input"></ion-input>
     </ion-item>
 
     <ion-item>
@@ -33,7 +32,8 @@
       <ion-toggle [(ngModel)]="pushenabled" color="primary"></ion-toggle>
     </ion-item>
   </ion-list>
-  <div *ngIf="pushenabled"></div>
+  
+  <div *ngIf="pushenabled">
   <ion-list-header>
     <ion-label>When to notify me about...</ion-label>
   </ion-list-header>
@@ -45,5 +45,21 @@
     <ion-label>Today's Events</ion-label>
     <ion-datetime displayFormat="hh:mm a" placeholder="Select a time"></ion-datetime>
   </ion-item>
-</ion-content>
 
+  <ion-list-header>
+    <ion-label>Warning Notifications</ion-label>
+  </ion-list-header>
+  <ion-item>
+    <ion-label>Percipitation Warning</ion-label>
+    <ion-toggle color="secondary"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label>Freezing Warning</ion-label>
+    <ion-toggle color="secondary"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label>Storm Warning</ion-label>
+    <ion-toggle color="secondary"></ion-toggle>
+  </ion-item>
+  </div>
+</ion-content>
