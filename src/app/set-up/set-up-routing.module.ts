@@ -4,14 +4,6 @@ import { SetUpPage } from './set-up.page';
 
 const routes: Routes = [
   {
-    path: '',
-    component: SetUpPage
-  }
-];
-
-
-const routes: Routes = [
-  {
     path: 'SetUp',
     component: SetUpPage,
     children: [
@@ -28,14 +20,14 @@ const routes: Routes = [
 
       {
         path: '',
-        redirectTo: '/set-up/SetUp',
+        redirectTo: '/SetUp',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/set-up/SetUp',
+    redirectTo: '/SetUp',
     pathMatch: 'full'
   }
 ];
