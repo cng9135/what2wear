@@ -3,7 +3,9 @@
     <ion-title>
       Setup
     </ion-title>
-  </ion-toolbar>
+    <ion-item>
+        <ion-button (click)="presentWeather()">Next</ion-button>
+    </ion-item>  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -12,14 +14,20 @@
       <ion-title size="large">Setup</ion-title>
     </ion-toolbar>
   </ion-header>
-  
-  <ion-button href="/tabs">Next</ion-button>
 
   <ion-list>
+<<<<<<< HEAD
     <ion-item-divider>Name</ion-item-divider>
     <IonItem>
       <IonInput value={text} placeholder="Enter Your Name:" onIonChange={e => setText(e.detail.value!)}></IonInput>
     </IonItem>
+=======
+      <ion-item>
+        <ion-label>Name</ion-label>
+        <ion-input class="ion-text-right" placeholder="Enter Your Name"></ion-input>
+      </ion-item>
+      
+>>>>>>> 25e79d1e8b9894a8a0b5867660d0fb50b2b341f3
     <ion-item>
       <ion-label>Temperature</ion-label>
       <ion-select value="f">
@@ -33,7 +41,8 @@
       <ion-toggle [(ngModel)]="pushenabled" color="primary"></ion-toggle>
     </ion-item>
   </ion-list>
-  <div *ngIf="pushenabled"></div>
+  
+  <div *ngIf="pushenabled">
   <ion-list-header>
     <ion-label>When to notify me about...</ion-label>
   </ion-list-header>
@@ -45,4 +54,22 @@
     <ion-label>Today's Events</ion-label>
     <ion-datetime displayFormat="hh:mm a" placeholder="Select a time"></ion-datetime>
   </ion-item>
+
+  <ion-list-header>
+    <ion-label>Warning Notifications</ion-label>
+  </ion-list-header>
+  <ion-item>
+    <ion-label>Percipitation Warning</ion-label>
+    <ion-toggle color="secondary"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label>Freezing Warning</ion-label>
+    <ion-toggle color="secondary"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label>Storm Warning</ion-label>
+    <ion-toggle color="secondary"></ion-toggle>
+  </ion-item>
+  </div>
 </ion-content>
+
