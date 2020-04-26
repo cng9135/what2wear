@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { NavParams } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
-
+import { Injectable } from '@angular/core';
+import { Storage } from '@ionic/storage';
+import { StorageService } from '../storage.service';
 @Component({
   selector: 'app-add-event',
   templateUrl: 'add-event.page.html',
@@ -9,17 +11,30 @@ import { ModalController } from '@ionic/angular';
 })
 export class AddEventPage{
   newEvent = <any>{};
-
-  constructor(public modalController: ModalController) {}
+  constructor(public modalController: ModalController, public storageService: StorageService) {}
 
   async closeModal() {
     await this.modalController.dismiss();
   }
   
 
+  
   addEvent() {
     let nevent = this.newEvent;
-    console.log(nevent);
+    this.storageService.setObject(this.newEvent.name,nevent);
+    this.storageService.getObject(this.newEvent.name).then(result => {
+      
+      if (result != null) {
+
+        console.log('console testing' + result);
+
+
+      }  
+      }).catch(e => { 
+        console.log('error: ', e);
+     });
+    }
   }
-}
+
+
 

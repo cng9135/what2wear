@@ -15,12 +15,12 @@
 
   <ion-item>
     <ion-label position="floating">Event Name:</ion-label>
-    <ion-input [(ngModel)]="newEvent.name" name="name"></ion-input>
+    <ion-input id= "eventName" name="name" [(ngModel)]="newEvent.name"></ion-input>
   </ion-item>
   
   <ion-item>
     <ion-label position="floating">Date of Event:</ion-label>
-    <ion-datetime placeholder="Select Date" [(ngModel)]="newEvent.date" name="date"></ion-datetime>
+    <ion-datetime placeholder="Select Date" [(ngModel)]="newEvent.date"name="date"></ion-datetime>
   </ion-item>
 
   <ion-item>
