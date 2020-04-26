@@ -7,9 +7,9 @@ import { RouterModule } from '@angular/router';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 @NgModule({
   imports: [
-    CommonModule,
     FormsModule,
     IonicModule,
+    CommonModule,
     ExploreContainerComponentModule,
     RouterModule.forChild([{ path: '', component: EditEventPage }])
   ],

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { ViewEventPage } from '../view-event/view-event.page';
+import { EditEventPage } from '../edit-event/edit-event.page';
 
 @Component({
   selector: 'app-tab2',
@@ -10,7 +11,6 @@ import { ViewEventPage } from '../view-event/view-event.page';
 export class Tab2Page {
 
   constructor(public modalController: ModalController) {}
-
   async presentViewEvent() {
     const modal = await this.modalController.create({
       component: ViewEventPage

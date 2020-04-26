@@ -9,10 +9,10 @@ import { ModalController } from '@ionic/angular';
 })
 export class EditEventPage{
 
-  constructor(public modalController: ModalController) { }
+  constructor(public editEventController: ModalController) { }
 
   async closeModal() {
-    await this.modalController.dismiss();
+    await this.editEventController.dismiss();
   }
   
 }

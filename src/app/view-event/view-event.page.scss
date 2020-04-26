@@ -14,17 +14,4 @@ ion-content {
   ion-content ion-toolbar {
     --background: translucent;
   }
-  ::-webkit-scrollbar, *::-webkit-scrollbar {
-    display: none;
-    overflow: hidden;
-  }
   
-  ion-content {
-    overflow: hidden;
-    --overflow: hidden;
-  }
-  
-  .scroll-content {
-    overflow: hidden;
-  }
- 

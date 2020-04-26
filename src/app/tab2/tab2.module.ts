@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { Tab2Page } from './tab2.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 import { ViewEventPage } from '../view-event/view-event.page';
+import { EditEventPage } from '../edit-event/edit-event.page';
+
 
 @NgModule({
   imports: [
@@ -15,7 +17,7 @@ import { ViewEventPage } from '../view-event/view-event.page';
     ExploreContainerComponentModule,
     RouterModule.forChild([{ path: '', component: Tab2Page }])
   ],
-  declarations: [Tab2Page,ViewEventPage],
-  entryComponents: [ViewEventPage]
+  declarations: [Tab2Page,ViewEventPage,EditEventPage],
+  entryComponents: [ViewEventPage, EditEventPage]
 })
 export class Tab2PageModule {}
