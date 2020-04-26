@@ -38,6 +38,16 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'set-up',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../set-up/set-up.module').then(m => m.SetUpPageModule)
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
