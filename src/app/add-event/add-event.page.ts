@@ -8,6 +8,7 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['add-event.page.scss'],
 })
 export class AddEventPage{
+  newEvent = <any>{};
 
   constructor(public modalController: ModalController) {}
 
@@ -15,4 +16,10 @@ export class AddEventPage{
     await this.modalController.dismiss();
   }
   
+
+  addEvent() {
+    let nevent = this.newEvent;
+    console.log(nevent);
+  }
 }
+

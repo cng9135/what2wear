@@ -9,6 +9,9 @@ import { AddEventPage } from '../add-event/add-event.page';
 })
 export class Tab3Page {
 
+  date: string;
+  type: 'string';
+
   constructor(public modalController: ModalController) {}
 
   async presentAddEvent() {
@@ -16,6 +19,10 @@ export class Tab3Page {
       component: AddEventPage
     });
     return await modal.present();
+  }
+
+  onChange($event) {
+    console.log($event);
   }
 
 }

@@ -15,22 +15,22 @@
 
   <ion-item>
     <ion-label position="floating">Event Name:</ion-label>
-    <ion-textarea></ion-textarea>
+    <ion-input [(ngModel)]="newEvent.name" name="name"></ion-input>
   </ion-item>
   
   <ion-item>
     <ion-label position="floating">Date of Event:</ion-label>
-    <ion-textarea></ion-textarea>
+    <ion-datetime placeholder="Select Date" [(ngModel)]="newEvent.date" name="date"></ion-datetime>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">Location:</ion-label>
-    <ion-textarea></ion-textarea>
+    <ion-input [(ngModel)]="newEvent.location" name="location"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">Time of Event</ion-label>
-    <ion-textarea></ion-textarea>
+    <ion-datetime displayFormat="hh:mm a" placeholder="Select a time" [(ngModel)]="newEvent.time" name="time"></ion-datetime>
   </ion-item>
 
   <ion-item>
@@ -44,13 +44,13 @@
 
   <ion-item>
     <ion-label position="floating">What to Bring</ion-label>
-    <ion-textarea placeholder="Optional"></ion-textarea>
+    <ion-input [(ngModel)]="newEvent.bring" name="bring"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">Notes:</ion-label>
-    <ion-textarea placeholder="Optional"></ion-textarea>
+    <ion-input [(ngModel)]="newEvent.notes" name="notes"></ion-input>
   </ion-item>
 
-  <ion-button size="large" color="primary">Add to Calendar</ion-button>
+  <ion-button size="large" color="primary" type="submit" (click)="addEvent()">Add to Calendar</ion-button>
 </ion-content>

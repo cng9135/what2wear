@@ -11,6 +11,31 @@ ion-content {
   color: rgb(114, 117, 97);
 }
 
+.other-day-weather{
+
+  ion-card {
+    border-radius: 25px;
+    border: 2px solid white;
+    background-color: rgba(255,255,255,0.3);
+    &#weather-danger {
+      background-color: rgb(255, 201, 0) !important;
+    }
+    
+  }
+  ion-card-title {
+
+    color: white;
+
+    ion-icon {
+      font-size: 40px;
+    }
+    .temp {
+      font-size: 20px;
+    }
+  }
+
+}
+
 ion-content ion-toolbar {
   --background: translucent;
 }

@@ -13,13 +13,56 @@
     <ion-icon class="weather-icon" name="rainy-outline"></ion-icon>
     <h1>73˚F</h1>
     <h3>Cameron, it's <span class="weather-text">raining</span> outside</h3>
+
+    <ion-slides class="other-day-weather">
+
+      <ion-slide>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>04/27</ion-card-subtitle>
+            <ion-card-title>
+              <ion-icon name="sunny-outline" style="color: yellow;"></ion-icon>
+              <div class="temp">83˚F</div>
+            </ion-card-title>
+          </ion-card-header>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>04/28</ion-card-subtitle>
+            <ion-card-title>
+              <ion-icon name="cloudy-outline"></ion-icon>
+              <div class="temp">76˚F</div>
+            </ion-card-title>
+          </ion-card-header>
+        </ion-card>
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-icon name="arrow-back-outline"></ion-icon>
+        <ion-card id="weather-danger">
+          <ion-card-header>
+            <ion-card-subtitle>04/29 <ion-badge color="danger">!</ion-badge> </ion-card-subtitle>
+            <ion-card-title>
+              <ion-icon name="thunderstorm-outline"></ion-icon>
+              <div class="temp">76˚F</div>
+            </ion-card-title>
+          </ion-card-header>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>04/30</ion-card-subtitle>
+            <ion-card-title>
+              <ion-icon name="sunny-outline" style="color: yellow;"></ion-icon>
+              <div class="temp">76˚F</div>
+            </ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
   
-  <ion-item scrollX="true">
-      <ion-button size="medium" color="light">Day1</ion-button>
-      <ion-button size="medium" color="medium">Day2</ion-button>
-      <ion-button size="medium" color="dark">Day3</ion-button>
-      <ion-button size="medium" color="primary">Day4</ion-button>
-  </ion-item>
   <h5>Events Today</h5>
 
  

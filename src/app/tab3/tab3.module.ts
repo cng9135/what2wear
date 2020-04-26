@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { Tab3Page } from './tab3.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 import { AddEventPage } from '../add-event/add-event.page'
+import { CalendarModule } from 'ion2-calendar';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { AddEventPage } from '../add-event/add-event.page'
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    RouterModule.forChild([{ path: '', component: Tab3Page }])
+    RouterModule.forChild([{ path: '', component: Tab3Page }]),
+    CalendarModule
   ],
   declarations: [Tab3Page, AddEventPage],
   entryComponents: [AddEventPage]
