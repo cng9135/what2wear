@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { Tab2Page } from '../tab2/tab2.page';
 
 @Component({
   selector: 'app-set-up',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SetUpPage implements OnInit {
 
-  constructor() { }
+  constructor(public modalController: ModalController) {}
+
+  async presentWeather() {
+    const modal = await this.modalController.create({
+      component: Tab2Page
+    });
+    return await modal.present();
+  }
+
 
   ngOnInit() {
   }
 
 }
+
