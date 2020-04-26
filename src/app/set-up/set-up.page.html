@@ -16,10 +16,10 @@
   <ion-button href="/tabs">Next</ion-button>
 
   <ion-list>
-    <IonItemDivider>Name</IonItemDivider>
-    <IonItem>
+    <ion-item-divider>Name</ion-item-divider>
+    <ion-item>
       <IonInput value={text} placeholder="Enter Your Name:" onIonChange={e => setText(e.detail.value!)}></IonInput>
-    </IonItem>
+  </ion-item>
     <ion-item>
       <ion-label>Temperature</ion-label>
       <ion-select value="f">
@@ -46,3 +46,4 @@
     <ion-datetime displayFormat="hh:mm a" placeholder="Select a time"></ion-datetime>
   </ion-item>
 </ion-content>
+
