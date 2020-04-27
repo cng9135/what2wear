@@ -7,6 +7,7 @@ export class StorageService {
   constructor(public storage: Storage)
   { console.log('Your storage provider is working here !'); }
   // set a key/value
+  
   async set(key: string, value: any): Promise<any> {
   try {
     const result = await this.storage.set(key, value);

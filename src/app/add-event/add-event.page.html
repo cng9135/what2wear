@@ -20,7 +20,7 @@
   
   <ion-item>
     <ion-label position="floating">Date of Event:</ion-label>
-    <ion-datetime placeholder="Select Date" [(ngModel)]="newEvent.date"name="date"></ion-datetime>
+    <ion-datetime placeholder="Select Date" [(ngModel)]="newEvent.date" name="date"></ion-datetime>
   </ion-item>
 
   <ion-item>
@@ -30,13 +30,13 @@
 
   <ion-item>
     <ion-label position="floating">Time of Event</ion-label>
-    <ion-datetime displayFormat="hh:mm a" placeholder="Select a time" [(ngModel)]="newEvent.time" name="time"></ion-datetime>
+    <ion-datetime displayFormat="h:mm A" placeholder="Select a time" [(ngModel)]="newEvent.time" name="time"></ion-datetime>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">How to Dress:</ion-label>
     <ion-select value="c">
-      <ion-select-option value="c">Casual</ion-select-option>
+      <ion-select-option value="c" >Casual</ion-select-option>
       <ion-select-option value="s">Semi-Formal</ion-select-option>
       <ion-select-option value="f">Formal</ion-select-option>
     </ion-select>

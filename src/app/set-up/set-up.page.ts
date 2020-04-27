@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { Tab2Page } from '../tab2/tab2.page';
+import { Storage } from '@ionic/storage';
+import { StorageService } from '../storage.service';
 
 @Component({
   selector: 'app-set-up',
@@ -9,7 +11,7 @@ import { Tab2Page } from '../tab2/tab2.page';
 })
 export class SetUpPage implements OnInit {
 
-  constructor(public modalController: ModalController) {}
+  constructor(public modalController: ModalController, public storageService: StorageService) {}
 
   async presentWeather() {
     const modal = await this.modalController.create({
@@ -18,7 +20,10 @@ export class SetUpPage implements OnInit {
     return await modal.present();
   }
 
-
+  clear()
+  {
+    this.storageService.clear();
+  }
   ngOnInit() {
   }
 
