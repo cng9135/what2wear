@@ -13,7 +13,7 @@ import { StorageService } from '../storage.service';
 })
 export class ViewEventPage {
   eventName: string;
-  eventLocation; eventTime; eventBring; eventNotes;
+  eventLocation; eventTime; eventBring; eventNotes; eventDress;
 
   constructor(public modalController: ModalController, public storageService: StorageService, public navParams: NavParams) {
    this.eventName = navParams.get('eventName');
@@ -23,6 +23,7 @@ export class ViewEventPage {
         this.eventLocation = result.location;
         this.eventBring = result.bring;
         this.eventNotes = result.notes;
+        this.eventDress = result.dress;
         }
       ).catch(e => 
         { 

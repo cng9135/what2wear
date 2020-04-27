@@ -35,10 +35,10 @@
 
   <ion-item>
     <ion-label position="floating">How to Dress:</ion-label>
-    <ion-select value="c">
-      <ion-select-option value="c" >Casual</ion-select-option>
-      <ion-select-option value="s">Semi-Formal</ion-select-option>
-      <ion-select-option value="f">Formal</ion-select-option>
+    <ion-select value="Casual"  [(ngModel)]="newEvent.dress">
+      <ion-select-option value="Casual">Casual</ion-select-option>
+      <ion-select-option value="Semi-Formal">Semi-Formal</ion-select-option>
+      <ion-select-option value="Formal">Formal</ion-select-option>
     </ion-select>
   </ion-item>
 
