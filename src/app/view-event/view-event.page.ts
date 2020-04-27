@@ -15,7 +15,8 @@ export class ViewEventPage {
   eventName: string;
   eventLocation; eventTime; eventBring; eventNotes; eventDress;
 
-  constructor(public modalController: ModalController, public storageService: StorageService, public navParams: NavParams) {
+  constructor(public modalController: ModalController, public storageService: 
+    StorageService, public navParams: NavParams) {
    this.eventName = navParams.get('eventName');
     this.storageService.getObject(this.eventName).then(result => {
         let date = new Date(result.time);
@@ -30,7 +31,11 @@ export class ViewEventPage {
           console.log('error: ', e);
         });
       }
-     
+  deleteEvent()
+  {
+    this.storageService.remove(this.eventName);
+    location.reload();
+  }
     
 
   
