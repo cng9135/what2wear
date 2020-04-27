@@ -31,17 +31,20 @@ export class ViewEventPage {
           console.log('error: ', e);
         });
       }
+
+
   deleteEvent()
   {
     this.storageService.remove(this.eventName);
     location.reload();
   }
     
-
-  
   async presentEditEvent() {
     const modal = await this.modalController.create({
-      component: EditEventPage
+      component: EditEventPage,
+      componentProps:{
+        eventName: this.eventName,
+      }
     });
     return await modal.present();
   }

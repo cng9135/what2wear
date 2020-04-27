@@ -11,7 +11,6 @@ import { StorageService } from '../storage.service';
 })
 export class AddEventPage{
   newEvent = <any>{};
-  theDate = new Date().toISOString;
   constructor(public modalController: ModalController, public storageService: StorageService) {}
 
   async closeModal() {
