@@ -20,7 +20,7 @@ export class AddEventPage{
   
 
   
-  addEvent() {
+  async addEvent() {
     let nevent = this.newEvent;
     this.storageService.setObject(this.newEvent.name,nevent);
     this.storageService.getObject(this.newEvent.name).then(result => {
@@ -34,7 +34,9 @@ export class AddEventPage{
       }).catch(e => { 
         console.log('error: ', e);
      });
+     await this.modalController.dismiss();
     }
+    
   }
 
 

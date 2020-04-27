@@ -12,8 +12,28 @@ import { StorageService } from '../storage.service';
   styleUrls: ['view-event.page.scss'],
 })
 export class ViewEventPage {
+  eventName: string;
+  eventLocation; eventTime; eventBring; eventNotes;
 
-  constructor(public modalController: ModalController, public storageService: StorageService) {}
+  constructor(public modalController: ModalController, public storageService: StorageService, public navParams: NavParams) {
+   this.eventName = navParams.get('eventName');
+    this.storageService.getObject(this.eventName).then(result => {
+        console.log(result);
+        let date = new Date(result.time);
+        this.eventTime= date;
+        this.eventLocation = result.location;
+        this.eventBring = result.bring;
+        this.eventNotes = result.notes;
+        }
+      ).catch(e => 
+        { 
+          console.log('error: ', e);
+        });
+      }
+     
+    
+
+  
   async presentEditEvent() {
     const modal = await this.modalController.create({
       component: EditEventPage

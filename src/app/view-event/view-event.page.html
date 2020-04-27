@@ -13,37 +13,37 @@
 
 <ion-content [fullscreen]="true" class ="no-scroll">
   <ion-item color = "primary">
-    <ion-label>Event Name:</ion-label>
+    <ion-label>Event Name: {{eventName}}</ion-label>
   </ion-item>
   
   <ion-item color = "primary">
-    <ion-label >Date:</ion-label>
+    <ion-label >Date: {{eventTime | date: 'dd/MM/yy'}}</ion-label>
     
   </ion-item>
 
   <ion-item color = "primary">
-    <ion-label>Location:</ion-label>
+    <ion-label>Location: {{eventLocation}}</ion-label>
 
   </ion-item>
 
   <ion-item color = "primary">
-    <ion-label>Time</ion-label>
+    <ion-label>Time: {{eventTime | date: 'h:mma'}}</ion-label>
   </ion-item>
 
   <ion-item color = "primary">
-    <ion-label>How to Dress:</ion-label>
+    <ion-label>How to Dress: NEED TO DO</ion-label>
   </ion-item>
 
   <ion-item color = "primary">
-    <ion-label>What to Bring:</ion-label>
+    <ion-label>What to Bring: {{eventBring}}</ion-label>
   </ion-item>
 
   <ion-item color = "primary">
-    <ion-label>Notes:</ion-label>
+    <ion-label>Notes: {{eventNotes}} </ion-label>
   
   </ion-item>
   <section>
-    <ion-button size="large" color="primary" (click) = "clear()">
+    <ion-button size="large" color="primary">
       Edit Event
     </ion-button>
   </section>
