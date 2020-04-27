@@ -21,8 +21,9 @@ export class Tab2Page {
   public eventNumber;
   public listOfKeys: string[];
    
-  constructor(public modalController: ModalController, public storageService: StorageService) {
+  constructor(public modalController: ModalController, public storageService: StorageService, ) {
     let todayDateString = new String;
+    //window.location.reload();
     //make date's UTC into today, since timezone is off
     this.myDate.setUTCDate(this.myDate.getDate());
     //break ISO string into substring
@@ -55,6 +56,10 @@ export class Tab2Page {
         }
       }
     )
+  }
+  refresh()
+  {
+    location.reload();
   }
   async presentViewEvent1() {
     const modal = await this.modalController.create({

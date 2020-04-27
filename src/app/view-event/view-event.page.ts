@@ -18,7 +18,6 @@ export class ViewEventPage {
   constructor(public modalController: ModalController, public storageService: StorageService, public navParams: NavParams) {
    this.eventName = navParams.get('eventName');
     this.storageService.getObject(this.eventName).then(result => {
-        console.log(result);
         let date = new Date(result.time);
         this.eventTime= date;
         this.eventLocation = result.location;
